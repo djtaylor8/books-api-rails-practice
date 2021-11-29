@@ -3,7 +3,7 @@ module Api
         class AuthenticationController < ApplicationController
             class AuthenticateError < StandardError; end 
             rescue_from ApplicationController::ParameterMissing, with: :parameter_missing
-            rescue_from AuthenticateError, with :handle_unauthenticated
+            rescue_from AuthenticateError, with: :handle_unauthenticated
 
             def create 
                 if user 
