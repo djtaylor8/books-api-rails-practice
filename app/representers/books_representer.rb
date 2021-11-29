@@ -1,7 +1,8 @@
 class BooksRepresenter
     def initialize(books)
       @books = books
-    end 
+    end
+  
     def as_json
       books.map do |book|
         {
@@ -13,6 +14,8 @@ class BooksRepresenter
         }
       end
     end
+  
     private
+  
     attr_reader :books
-   end
+  end
