@@ -5,7 +5,7 @@ class CategoryRepresenter
 
     def as_json
         {
-            id: category.id
+            id: category.id,
             name: category.name
         }
     end

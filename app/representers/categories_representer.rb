@@ -4,9 +4,9 @@ class CategoriesRepresenter
     end
 
     def as_json
-        categories.map do |category|
+        categories.tap do |category|
             {
-                id: category.id
+                id: category.id,
                 name: category.name
             }
         end

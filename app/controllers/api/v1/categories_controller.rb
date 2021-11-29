@@ -13,7 +13,7 @@ module Api
             def create
                 @category = Category.create(category_params)
                 if @category.save
-                    render json: CategoriesRepresenter.new(@category).as_ison, status: :created
+                    render json: CategoriesRepresenter.new(@category).as_json, status: :created
                 else
                     render json: @category.errors, status: :unprocessable_entity
                 end

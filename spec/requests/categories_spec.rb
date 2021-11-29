@@ -4,7 +4,7 @@ RSpec.describe 'Categories', type: :request do
   # initialize test data
   let!(:categories) { create_list(:category, 5) }
   let!(:category_id) { categories.first.id }
-  
+
   # Test suite for GET /category
   describe 'GET /categories' do
     # make HTTP get request before each example
